@@ -1,0 +1,30 @@
+{
+  "name": "disin",
+  "version": "1.5.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "fslightbox-react": "^1.7.6",
+    "next": "14.2.3",
+    "react": "^18",
+    "react-accessible-accordion": "^5.0.0",
+    "react-dom": "^18",
+    "react-tabs": "^6.0.2",
+    "sass": "^1.77.1",
+    "swiper": "^11.1.3"
+  },
+  "devDependencies": {
+    "@types/fslightbox-react": "^1.7.7",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "typescript": "^5"
+  }
+}

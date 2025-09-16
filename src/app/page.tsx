@@ -28,13 +28,13 @@ export default function Home() {
 
       <OurExpertise />
 
-      <VideoIntro />
+      {/* <VideoIntro /> */}
 
       <OurDoctors />
 
       <LatestBlogPost />
 
-      <NewsletterForm />
+      {/* <NewsletterForm /> */}
 
       <Footer />
     </>

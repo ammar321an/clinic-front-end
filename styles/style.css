@@ -225,10 +225,16 @@ button:focus {
   padding-left: 0;
   transition: 0.5s all ease;
 }
-.main-nav nav .navbar-nav {
+/* .main-nav nav .navbar-nav {
   margin-right: auto;
   margin-left: auto;
+} */
+
+.main-nav nav .navbar-nav {
+  margin-right: auto;
+  margin-left: 30px;
 }
+
 .main-nav nav .navbar-nav .nav-item:hover a {
   color: #0046c0;
 }

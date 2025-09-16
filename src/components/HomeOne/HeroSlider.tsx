@@ -34,15 +34,17 @@ const HeroSlider: React.FC = () => {
                         src="/images/home-one/home-slider1.png"
                         alt="Shape"
                         width={730}
-                        height={500}
+                        height={600}
                       />
                     </div>
 
-                    <h1>Exceptional Health Care for Woman</h1>
+                    <h1>Dr. Asyraf</h1>
+                    <h2 className="text-white"><strong>Pakar Sakit Puan & Bidan | Pakar Pembedahan Invasif<br /> Minimum dan Pembedahan Kompleks</strong></h2>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Quis ipsum suspendisse ultrices gravida.
+                      Dr. Asyraf merupakan seorang pakar sakit puan dan bidan yang berpengalaman luas dalam bidang 
+                      obstetrik dan ginekologi. Beliau telah menjalani latihan intensif serta berkhidmat di beberapa 
+                      hospital utama di Malaysia termasuk Hospital Kuala Lumpur, Pusat Perubatan Universiti Malaya, 
+                      Hospital Duchess of Kent Sabah, Hospital Sultan Ismail Johor Bahru, dan Hospital Serdang.
                     </p>
 
                     <div className="common-btn">
@@ -77,11 +79,12 @@ const HeroSlider: React.FC = () => {
                         height={500}
                       />
                     </div>
-                    <h1>Caring Health is Important Than All</h1>
+                    <h1>Penjagaan Kesihatan Wanita yang Unggul dan Terbaik</h1>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Quis ipsum suspendisse ultrices gravida.
+                      Kami menyediakan rawatan terkini yang berasaskan garis panduan dan praktis klinikal antarabangsa, 
+                      demi memastikan kualiti penjagaan kesihatan wanita yang terbaik.
+                      <br /><br />
+                      Pembedahan invasif minima merupakan pendekatan utama dalam rawatan kami.
                     </p>
 
                     <div className="common-btn">
@@ -116,11 +119,17 @@ const HeroSlider: React.FC = () => {
                         height={500}
                       />
                     </div>
-                    <h1>We Offer Highly Treatments</h1>
+                    <h1>Rawatan & Prosedur Pakar</h1>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Quis ipsum suspendisse ultrices gravida.
+                      Kami menyediakan pelbagai perkhidmatan perubatan dan pembedahan 
+                      seperti diagnosis melalui ultrasound 2D dan 3D, rawatan moden seperti 
+                      pembedahan invasif minima (laparoskopi & histeroskopi), penjagaan ibu 
+                      mengandung termasuk kelahiran bayi, pencegahan kelahiran pramatang, 
+                      rawatan untuk masalah rahim jatuh, kesuburan, serta saringan awal kanser. 
+                      <br /><br />
+                      Kami juga mengendalikan kes keguguran, kehamilan luar rahim, dan pilihan 
+                      rawatan perubatan seperti pil hormon, implan, dan suntikan hormon bagi 
+                      mengatasi masalah kesihatan wanita dengan lebih selamat dan berkesan.
                     </p>
 
                     <div className="common-btn">

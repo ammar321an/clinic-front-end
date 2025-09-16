@@ -21,17 +21,20 @@ const Footer: React.FC = () => {
                   <ul>
                     <li>
                       <i className="icofont-ui-message"></i>
-                      <a href="mailto:info@disin.com">info@disin.com</a>
-                      <a href="mailto:hello@disin.com">hello@disin.com</a>
+                      <a href="mailto:info@disin.com">dr.m.asyraf@gmail.com</a>
+                      {/* <a href="mailto:hello@disin.com">hello@disin.com</a> */}
+                      <br />
                     </li>
                     <li>
                       <i className="icofont-stock-mobile"></i>
-                      <a href="tel:+07554332322">Call: +07 554 332 322</a>
-                      <a href="tel:+236256256365">Call: +236 256 256 365</a>
+                      <a href="tel:+60194565039">Call: +60 19 456 5039</a>
+                      <a href="tel:+60142330257">Call: +60 14 233 0257</a>
                     </li>
                     <li>
                       <i className="icofont-location-pin"></i>
-                      210-27 Quadra, Market Street, Victoria Canada
+                      KPJ Kajang Specialist Hospital, <br />
+                      Level 1, Suite No. 24, Jalan Cheras, <br />
+                      43000 Kajang, Selangor.
                     </li>
                   </ul>
                 </div>
@@ -52,9 +55,9 @@ const Footer: React.FC = () => {
                     <li>
                       <Link href="/blog/details">Our Expertise</Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link href="/faq">Faq</Link>
-                    </li>
+                    </li> */}
                     <li>
                       <Link href="/doctor">Doctors</Link>
                     </li>
@@ -94,11 +97,11 @@ const Footer: React.FC = () => {
               </div>
             </div>
 
-            <div className="col-sm-6 col-lg-3">
+            {/* <div className="col-sm-6 col-lg-3">
               <div className="footer-item">
                 <FeedbackForm />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </footer>

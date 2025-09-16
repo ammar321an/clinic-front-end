@@ -69,7 +69,7 @@ const Navbar: React.FC = () => {
               </div>
 
               <div className="nav-srh">
-                <form>
+                {/* <form>
                   <input
                     type="text"
                     className="form-control"
@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
                   <button className="search-icon icon-search">
                     <i className="icofont-search-1"></i>
                   </button>
-                </form>
+                </form> */}
               </div>
             </nav>
           </div>

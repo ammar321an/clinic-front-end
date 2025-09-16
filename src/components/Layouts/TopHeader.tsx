@@ -13,20 +13,20 @@ const TopHeader: React.FC = () => {
                 <div className="header-top-left">
                   <ul>
                     <li>
-                      <a href="tel:+07554332322">
+                      <a href="tel:+60194565039">
                         <i className="icofont-ui-call"></i>
-                        Call : +07 554 332 322
+                        Call : +60 19 456 5039
                       </a>
                     </li>
                     <li>
-                      <a href="mailto:hello@disin.com">
+                      <a href="mailto:dr.m.asyraf@gmail.com">
                         <i className="icofont-ui-message"></i>
-                        hello@disin.com
+                        dr.m.asyraf@gmail.com
                       </a>
                     </li>
                     <li>
                       <i className="icofont-location-pin"></i>
-                      210-27 Quadra, Canada
+                      24-25, Aras 1, Klinik Pakar Hospital Pakar KPJ Kajang, 43000 Kajang
                     </li>
                   </ul>
                 </div>

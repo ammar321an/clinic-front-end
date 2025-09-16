@@ -20,15 +20,15 @@ const Sidebar: React.FC = () => {
           <ul>
             <li>
               <i className="icofont-ui-call"></i>
-              Call: +07 554 332 322
+              Call: +60 19 456 5039
             </li>
             <li>
               <i className="icofont-ui-message"></i>
-              hello@disin.com
+              dr.m.asyraf@gmail.com
             </li>
             <li>
               <i className="icofont-location-pin"></i>
-              4th Floor, 408 No Chamber
+              24-25, Aras 1, Klinik Pakar Hospital Pakar KPJ Kajang, 43000 Kajang
             </li>
           </ul>
         </div>

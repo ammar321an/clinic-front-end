@@ -40,7 +40,7 @@ const FunFacts: React.FC = () => {
             <div className="col-sm-6 col-lg-3">
               <div className="counter-item">
                 <i className="icofont-badge"></i>
-                <h3 className="counter">18</h3>
+                <h3 className="counter">15</h3>
                 <p>Year Experience</p>
               </div>
             </div>

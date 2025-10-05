@@ -39,7 +39,7 @@ const HeroSlider: React.FC = () => {
                     </div>
 
                     <h1>Dr. Asyraf</h1>
-                    <h2 className="text-white"><strong>Pakar Sakit Puan & Bidan | Pakar Pembedahan Invasif<br /> Minimum dan Pembedahan Kompleks</strong></h2>
+                    <h2 className="text-white"><strong>Pakar Sakit Puan & Perbidanan | Pakar Pembedahan<br /> Invasif Minimum dan Pembedahan Kompleks</strong></h2>
                     <p>
                       Dr. Asyraf merupakan seorang pakar sakit puan dan bidan yang berpengalaman luas dalam bidang 
                       obstetrik dan ginekologi. Beliau telah menjalani latihan intensif serta berkhidmat di beberapa 

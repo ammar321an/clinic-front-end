@@ -1,3 +1,4 @@
+import "./globals.css";
 import "../../styles/bootstrap.min.css";
 import "../../styles/animate.css";
 import "../../styles/icofont.min.css";

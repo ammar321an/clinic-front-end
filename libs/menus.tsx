@@ -101,17 +101,17 @@ export const menus = [
   // },
   {
     label: "Blog",
-    link: "#",
-    submenu: [
-      {
-        label: "Blog",
-        link: "/blog/",
-      },
-      {
-        label: "Blog Details",
-        link: "/blog/details/",
-      },
-    ],
+    link: "/blog/",
+    // submenu: [
+    //   {
+    //     label: "Blog",
+    //     link: "/blog/",
+    //   },
+    //   {
+    //     label: "Blog Details",
+    //     link: "/blog/details-one/",
+    //   },
+    // ],
   },
   // {
   //   label: "Contact",

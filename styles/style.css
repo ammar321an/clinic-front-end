@@ -212,6 +212,17 @@ button:focus {
 
 /*-- End Header Top --*/
 /*-- Navbar --*/
+
+.main-nav nav .navbar-nav .nav-item {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.main-nav nav .navbar-nav {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
 .main-nav {
   background: #ffffff;
   padding-top: 0;
@@ -1004,15 +1015,25 @@ button:focus {
 }
 .blog-item .blog-top {
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
 }
+
 .blog-item .blog-top img {
   width: 100%;
   border-radius: 10px;
   transition: 0.5s all ease;
 }
 .blog-item .blog-top a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 366px;
+  height: 283px;
 }
+
 .blog-item .blog-bottom {
   padding-top: 25px;
   padding-left: 20px;
@@ -2516,6 +2537,14 @@ footer {
   margin-bottom: 16px;
   line-height: 1.4;
 }
+
+.blog-details-item .blog-details-img h5 {
+  color: #232323;
+  font-weight: 600;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
 .blog-details-item .blog-details-img ul {
   margin: 0;
   padding: 0;
@@ -2555,6 +2584,91 @@ footer {
   font-size: 15px;
   margin-bottom: 25px;
 }
+
+.custom-bullet-list {
+  margin: 0 0 25px 0;
+  padding-left: 20px; 
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.custom-bullet-list li {
+  list-style-type: disc !important;
+  display: list-item !important;
+  margin-bottom: 8px;
+  color: #49677d !important;
+  font-size: 15px !important;
+  line-height: 1.7;
+  padding-left: 20px; 
+  text-indent: -20px; 
+  margin-left: 0;
+}
+
+.custom-numbered-list {
+  margin: 0 0 25px 0;
+  padding-left: 0;
+  list-style-type: none;
+  counter-reset: item-counter;
+}
+
+.custom-numbered-list li {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  color: #49677d;
+  font-size: 15px !important;
+  line-height: 1.7;
+  counter-increment: item-counter;
+  position: relative;
+  padding-left: 30px;
+}
+
+.custom-numbered-list li::before {
+  content: counter(item-counter) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  color: #0046c0;
+  min-width: 20px;
+}
+
+.custom-numbered-list p,
+.custom-bullet-list p {
+  color: #49677d;
+  font-size: 15px !important;
+  line-height: 1.7;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.custom-numbered-list .list-title {
+  font-weight: bold;
+  color: #232323;
+  display: inline;
+}
+
+.custom-numbered-list .list-description {
+  font-weight: normal;
+  color: #49677d;
+  display: block;
+  margin-top: 5px;
+  
+}
+
+/* Reset counter for nested bullet lists */
+.custom-numbered-list .custom-bullet-list {
+  counter-reset: none;
+}
+
+.custom-numbered-list .custom-bullet-list li {
+  counter-increment: none;
+}
+
+.custom-numbered-list .custom-bullet-list li::before {
+  display: none;
+}
+
 .blog-details-item .blog-details-previous ul {
   margin: 0;
   padding: 0;

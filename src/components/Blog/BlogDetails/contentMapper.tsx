@@ -9,6 +9,8 @@ const GynaeSurgeryContent = dynamic(() => import("./contents/GynaeSurgery"));
 const PcosContent = dynamic(() => import("./contents/Pcos"));
 const RedFlagContent = dynamic(() => import("./contents/RedFlag"));
 const MenopauseContent = dynamic(() => import("./contents/Menopause"));
+const CervicalInsufficiencyContent = dynamic(() => import("./contents/CervicalInsufficiency"));
+const PelvicProlapseContent = dynamic(() => import("./contents/PelvicProlapse"));
 
 interface ContentComponents {
   [key: string]: React.ComponentType<any>;
@@ -22,6 +24,8 @@ const contentComponents: ContentComponents = {
   Pcos: PcosContent,
   RedFlag: RedFlagContent,
   Menopause: MenopauseContent,
+  CervicalInsufficiency: CervicalInsufficiencyContent,
+  PelvicProlapse: PelvicProlapseContent,
 };
 
 export const getContentComponent = (componentName: string): React.ComponentType<any> | null => {

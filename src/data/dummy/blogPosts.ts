@@ -180,6 +180,30 @@ export const blogDetailsData: BlogDetailData[] = [
     tags: ["Menopause", "Perimenopause", "Kesihatan Wanita"],
     category: "Kesihatan Wanita",
   },
+  {
+    slug: "ketidakcukupan-serviks-cervical-insufficiency-cerclage-perlindungan-kehamilan-anda",
+    title: "Ketidakcukupan Serviks (Cervical Insufficiency) & Cerclage: Perlindungan Kehamilan Anda",
+    author: "Dr. Muhammad Asyraf Azizan",
+    publishedDate: "2024-06-20T10:00:00Z",
+    metaDescription: "Ketidakcukupan serviks boleh menyebabkan keguguran lewat atau kelahiran pramatang. Artikel ini membincangkan punca, simptom, dan rawatan cerclage.",
+    ogImage: "/images/blog/blog-details-8a.jpg",
+    images: ["/images/blog/blog-details-8a.jpg"],
+    contentComponent: "CervicalInsufficiency",
+    tags: ["Ketidakcukupan Serviks", "Cervical Insufficiency", "Cerclage", "Kesihatan Wanita"],
+    category: "Kesihatan Wanita",
+  },
+  {
+    slug: "prolaps-organ-pelvis-peranakan-jatuh-apa-wanita-perlu-tahu",
+    title: "Prolaps Organ Pelvis (Peranakan Jatuh): Apa Wanita Perlu Tahu",
+    author: "Dr. Muhammad Asyraf Azizan",
+    publishedDate: "2024-07-01T10:00:00Z",
+    metaDescription: "Prolaps organ pelvis adalah keadaan di mana organ pelvis jatuh dari kedudukan asalnya. Artikel ini membincangkan punca, simptom, dan rawatan.",
+    ogImage: "/images/blog/blog-details-9a.jpg",
+    images: ["/images/blog/blog-details-9a.jpg"],
+    contentComponent: "PelvicProlapse",
+    tags: ["Prolaps Organ Pelvis", "Pelvic Prolapse", "Kesihatan Wanita"],
+    category: "Kesihatan Wanita",
+  },
 ];
 
 // Helper function to get blog detail by slug

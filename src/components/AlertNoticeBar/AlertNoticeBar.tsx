@@ -18,7 +18,9 @@ interface AlertNoticeBarProps {
   type?: 'info' | 'danger' | 'success' | 'warning' | 'dark' | 'white' | 'faq';
   title?: string;
   message?: string; 
+  messageBottom?: string;
   messageItems?: MessageItem[]; 
+  bulletPoints?: string[];
   faqItems?: FaqItem[];
   linkText?: string;
   linkHref?: string;
@@ -31,7 +33,9 @@ const AlertNoticeBar: React.FC<AlertNoticeBarProps> = ({
   type = 'info',
   title,
   message,
+  messageBottom,
   messageItems,
+  bulletPoints,
   faqItems,
   linkText,
   linkHref = "#",
@@ -111,15 +115,31 @@ const AlertNoticeBar: React.FC<AlertNoticeBarProps> = ({
           {title && <span className={`font-semibold ${isExpanded ? 'mb-3 block' : ''} ${type === 'white' ? 'text-orange-600' : type === 'faq' ? 'text-blue-600' : ''}`}>{title}</span>}
           
           <div className={`transition-all duration-300 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[500px] overflow-y-auto' : 'max-h-0 opacity-0'}`}>
+            {/* Top Message */}
             {message && (
-              <>
+              <div className="mb-2">
                 {title && " "}
                 {message}
-              </>
+              </div>
             )}
             
+            {/* Plain Bullet Points */}
+            {bulletPoints && (
+              <ul className="space-y-2 my-3">
+                {bulletPoints.map((point, index) => (
+                  <li key={index} className="flex items-start gap-2 w-full">
+                    <span className="text-[#49677d] flex-shrink-0 mt-1 p-3">•</span>
+                    <span className="text-[#49677d] text-[15px] leading-relaxed flex-1">
+                      {point}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            {/* MessageItems (with title + description) */}
             {messageItems && (
-              <div className={message ? "mt-3 space-y-3" : "mt-2 space-y-3"}>
+              <div className={message || bulletPoints ? "mt-3 space-y-3" : "mt-2 space-y-3"}>
                 {messageItems.map((item, index) => (
                   <div key={index} className="flex items-start gap-2">
                     <span className="text-current flex-shrink-0">•</span>
@@ -132,6 +152,7 @@ const AlertNoticeBar: React.FC<AlertNoticeBarProps> = ({
               </div>
             )}
 
+            {/* FAQ Items */}
             {faqItems && (
               <div className="space-y-4 mt-2">
                 {faqItems.map((item, index) => (
@@ -154,7 +175,15 @@ const AlertNoticeBar: React.FC<AlertNoticeBarProps> = ({
                 ))}
               </div>
             )}
+
+            {/* Bottom Message */}
+            {messageBottom && (
+              <div className="mt-3 text-[#49677d]">
+                {messageBottom}
+              </div>
+            )}
             
+            {/* Link */}
             {linkText && (
               <div className="mt-3">
                 <a 

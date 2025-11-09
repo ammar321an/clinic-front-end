@@ -17,13 +17,13 @@ const OurExpertise: React.FC = () => {
                 </div>
 
                 <div className="speciality-item">
-                  <div className="row m-0">
+                  <div className="row m-0" style={{ rowGap: '20px' }}>
                     <div className="col-sm-6 col-lg-6">
                       <div className="speciality-inner">
                         <i className="icofont-check-circled"></i>
-                        <h3>Child Care</h3>
+                        <h3>Certified Doctors</h3>
                         <p>
-                          Lorem ipsum dolor sit amet, is consectetur adipiscing
+                          Doktor bertauliah dengan kepakaran tinggi dalam memberikan rawatan terbaik kepada pesakit.
                         </p>
                       </div>
                     </div>
@@ -33,7 +33,7 @@ const OurExpertise: React.FC = () => {
                         <i className="icofont-check-circled"></i>
                         <h3>More Stuff</h3>
                         <p>
-                          Lorem ipsum dolor sit amet, is consectetur adipiscing
+                          Pasukan perubatan dan sokongan yang berpengalaman bagi memastikan layanan terbaik kepada setiap pesakit.                        
                         </p>
                       </div>
                     </div>
@@ -43,7 +43,7 @@ const OurExpertise: React.FC = () => {
                         <i className="icofont-check-circled"></i>
                         <h3>Enough Lab</h3>
                         <p>
-                          Lorem ipsum dolor sit amet, is consectetur adipiscing
+                          Doktor bertugas sepanjang masa bagi memastikan rawatan segera dan berterusan untuk pesakit.
                         </p>
                       </div>
                     </div>

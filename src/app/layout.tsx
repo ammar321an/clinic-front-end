@@ -16,7 +16,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import GoTop from "@/components/Layouts/GoTop";
 import FloatingActionBar from "@/components/Layouts/FloatingActionBar";
-import TopHeader from "@/components/Layouts/TopHeader";
+import ConditionalTopHeader from "@/components/Layouts/ConditionalTopHeader";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -37,9 +37,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <TopHeader />
+        <ConditionalTopHeader />
         {children}
-
         <GoTop />
         <FloatingActionBar />
       </body>

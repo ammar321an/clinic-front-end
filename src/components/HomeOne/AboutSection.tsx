@@ -31,12 +31,14 @@ const AboutSection: React.FC = () => {
                   width={556}
                   height={712}
                 />
-                <h2>About Our Hospital</h2>
+                <h2>About Dr Asyraf Clinic</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                  maecenas accumsan lacus vel facilisis.{" "}
+                  Klinik Pakar Dr. Asyraf beroperasi di Hospital Pakar KPJ Kajang, 
+                  menawarkan perkhidmatan obstetrik dan ginekologi yang menyeluruh. 
+                  Di bawah kepakaran Dr. Asyraf, klinik ini menyediakan rawatan moden 
+                  seperti pembedahan invasif minima, penjagaan kehamilan, rawatan 
+                  hormon, dan saringan kesihatan wanita, semuanya dijalankan dengan 
+                  pendekatan profesional, selamat dan penuh empati terhadap setiap pesakit.{" "}
                 </p>
 
                 <ul>

@@ -699,7 +699,7 @@ button:focus {
 }
 
 .service-item {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   box-shadow: 0px 0px 25px 0px rgba(221, 221, 221, 0.7490196078);
   text-align: center;
   position: relative;
@@ -707,10 +707,33 @@ button:focus {
   padding-bottom: 25px;
   padding-left: 15px;
   padding-right: 15px;
+  height: 100%;
+  transition: all 0.2s ease-in-out;
 }
 .service-item .service-front {
   transition: 0.5s all ease;
-  display: block;
+  display: flex; 
+  flex-direction: column; 
+  min-height: 200px;  
+  height: 100%;  
+}
+.service-item .service-front {
+  transition: 0.5s all ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.service-item:hover {
+  box-shadow: 0px 8px 35px 0px rgba(0, 70, 192, 0.3);  
+  transform: translateY(-5px);  
+  cursor: pointer;  
+}
+
+.service-item:hover .service-front {
+  text-decoration: none;  
 }
 .service-item .service-front i {
   display: block;
@@ -725,6 +748,13 @@ button:focus {
 }
 .service-item .service-front p {
   margin-bottom: 0;
+  display: -webkit-box; 
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  line-height: 1.5em; 
+  color: #344c5d; 
 }
 .service-item.bg {
   background-color: #f5f5f5;
@@ -756,7 +786,26 @@ button:focus {
   background-color: #0046c0;
   padding: 42px 25px 35px 25px;
   border-radius: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  height: 100%; 
+  transition: all 0.4s ease-in-out;
+}
+.expertise-item .expertise-inner .expertise-link {
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;  
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.expertise-item .expertise-inner:hover {
+  box-shadow: 0px 8px 35px 0px rgba(0, 70, 192, 0.5);
+  transform: translateY(-5px);
+}
+
+.expertise-item .expertise-inner:hover .expertise-link {
+  text-decoration: none;
 }
 .expertise-item .expertise-inner:hover i {
   box-shadow: none;
@@ -787,6 +836,12 @@ button:focus {
 .expertise-item .expertise-inner p {
   margin-bottom: 0;
   color: #ffffff;
+  display: -webkit-box;  
+  -webkit-line-clamp: 4;  
+  -webkit-box-orient: vertical;  
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  line-height: 1.5em;  
 }
 .expertise-item .expertise-right {
   padding-left: 80px;
@@ -3552,6 +3607,11 @@ footer {
   margin-right: 28px;
   box-shadow: 0px 0px 14px 0px #0046c0;
 }
+@media (max-width: 768px) {
+  .go-top {
+    display: none !important;
+  }
+}
 .go-top:hover {
   background-color: #111111;
   color: #ffffff;
@@ -3978,3 +4038,62 @@ footer {
 .faq-content .accordion .accordion__panel p {
   color: #344c5d;
 }/*# sourceMappingURL=style.css.map */
+
+/* Floating Action Bar */
+.floating-action-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #0046c0;
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 10px;
+  box-shadow: 0px -4px 20px 0px rgba(0, 70, 192, 0.4);
+  z-index: 9999;
+  transition: transform 0.3s ease-in-out;
+}
+
+.floating-action-bar.visible {
+  transform: translateY(0);
+}
+
+.floating-action-bar.hidden {
+  transform: translateY(100%);
+}
+
+.floating-action-bar .action-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: #ffffff;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 8px;
+  flex: 1;
+}
+
+.floating-action-bar .action-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.floating-action-bar .action-item span {
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Show only on mobile (≤768px) */
+@media (max-width: 768px) {
+  .floating-action-bar {
+    display: flex;
+  }
+}

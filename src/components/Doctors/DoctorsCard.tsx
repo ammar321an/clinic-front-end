@@ -7,7 +7,7 @@ import Image from "next/image";
 const DoctorsCard: React.FC = () => {
   return (
     <>
-      <div className="doctor-search-area">
+      {/* <div className="doctor-search-area">
         <div className="container">
           <form>
             <div className="row doctor-search-wrap">
@@ -45,7 +45,7 @@ const DoctorsCard: React.FC = () => {
             </div>
           </form>
         </div>
-      </div>
+      </div> */}
 
       <div className="doctors-area doctors-area-two pt-100 pb-70">
         <div className="container">
@@ -64,14 +64,14 @@ const DoctorsCard: React.FC = () => {
                 </div>
                 <div className="doctor-bottom">
                   <h3>
-                    <Link href="/doctors/details">Dr. Babatunde</Link>
+                    <Link href="/doctors/details">Dr. Asyraf</Link>
                   </h3>
-                  <span>Neurosurgeon</span>
+                  <span>Pakar Sakit Puan</span>
                 </div>
               </div>
             </div>
 
-            <div className="col-sm-6 col-lg-4">
+            {/* <div className="col-sm-6 col-lg-4">
               <div className="doctor-item">
                 <div className="doctor-top">
                   <Image
@@ -229,7 +229,7 @@ const DoctorsCard: React.FC = () => {
                   <span>Dental Surgeon</span>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -1,7 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import TopHeader from "../../../components/Layouts/TopHeader";
 import Navbar from "../../../components/Layouts/Navbar";
 import PageBanner from "../../../components/Common/PageBanner";
 import Footer from "../../../components/Layouts/Footer";
@@ -97,8 +96,6 @@ export default function BlogDetailPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-
-      <TopHeader />
       <Navbar />
       
       <PageBanner

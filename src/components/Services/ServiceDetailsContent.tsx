@@ -16,41 +16,33 @@ const ServiceDetailsContent: React.FC = () => {
               height={1000}
             />
 
-            <h2>Our Hospital Always Provide Good Services</h2>
+            <h2>Penjagaan Menyeluruh untuk Kesihatan Wanita</h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              Di klinik kami, kami percaya bahawa setiap wanita berhak menerima
+              penjagaan kesihatan yang terbaik, selamat dan penuh empati. Di bawah
+              kepakaran <strong>Dr. Asyraf</strong>, kami menawarkan rawatan
+              obstetrik dan ginekologi yang lengkap – daripada saringan awal,
+              rawatan perubatan, sehinggalah kepada pembedahan invasif minima
+              serta pembedahan kompleks. Kami mengutamakan pemahaman pesakit
+              terhadap penyakit dan pilihan rawatan yang sesuai, supaya setiap
+              keputusan dibuat dengan yakin dan jelas.
             </p>
 
             <blockquote>
               <i className="icofont-quote-left"></i>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-              optio rem magni, dolorum aut vel nostrum quae, fugit
-              necessitatibus eius perferendis. Quia optio tenetur pariatur
-              aliquam obcaecati enim quam eum?Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Sint optio rem magni, dolorum aut
-              vel nostrum quae, fugit necessitatibus eius perferendis. Quia
-              optio tenetur pariatur aliquam obcaecati enim quam eum?
+              “Kesihatan wanita bukan sekadar merawat penyakit, tetapi
+              membantu mereka memahami tubuh, membuat keputusan tepat dan
+              menjalani kehidupan yang sihat serta bermakna.”
             </blockquote>
+
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              Pendekatan kami menggabungkan kemajuan teknologi moden dan sentuhan
+              manusiawi. Sama ada anda memerlukan saringan rutin, rawatan hormon,
+              pemantauan kehamilan, atau pembedahan seperti laparoskopi dan
+              histeroskopi, kami memastikan setiap rawatan dijalankan dengan
+              penuh ketelitian dan perhatian. Kami sentiasa berusaha memberikan
+              pengalaman rawatan yang selamat, selesa, dan berkesan kepada semua
+              pesakit kami.
             </p>
           </div>
 
@@ -70,22 +62,72 @@ const ServiceDetailsContent: React.FC = () => {
             </div>
             <div className="col-lg-7">
               <div className="service-details-inner">
-                <h2>We Always Take Care Our Patient</h2>
+                <h2>Perkhidmatan Kami</h2>
                 <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Architecto blanditiis obcaecati veritatis magnam pariatur
-                  molestiae in maxime. Animi quae vitae in inventore. Totam
-                  mollitia aspernatur provident veniam aperiam placeat impedit!
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Saepe rem natus nobis, dolorum nam excepturi iure autem nemo
-                  ducimus temporibus facere, est eum voluptatem, culpa optio
-                  fugit assumenda quod? Praesentium.
+                  Kami menawarkan pelbagai jenis rawatan dan pembedahan untuk
+                  memenuhi keperluan kesihatan wanita dari pelbagai peringkat umur.
+                  Setiap perkhidmatan dijalankan mengikut garis panduan klinikal
+                  antarabangsa dengan tumpuan terhadap keselamatan dan kesejahteraan
+                  pesakit.
                 </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
-                  laudantium ullam, iure distinctio officia libero voluptatem
-                  obcaecati vero deleniti minima nemo itaque alias nisi eveniet
-                  soluta architecto quae laboriosam unde.
+
+                <p className="mt-2">
+                  <strong>1. Pembedahan Invasif Minima (MIS)</strong> – Rawatan moden
+                  menggunakan lubang kecil seperti laparoskopi dan histeroskopi untuk
+                  mengurangkan kesakitan, risiko jangkitan serta mempercepatkan
+                  pemulihan.
+                </p>
+
+                <p className="mt-2">
+                  <strong>2. Pembedahan Kompleks</strong> – Bagi kes seperti
+                  ketumbuhan besar, endometriosis teruk, atau pembedahan struktur
+                  pelvis, dijalankan dengan ketelitian dan kepakaran tinggi.
+                </p>
+
+                <p className="mt-2">
+                  <strong>3. Antenatal & Ultrasound Bayi</strong> – Pemantauan kehamilan
+                  yang menyeluruh menggunakan ultrasound 2D dan 3D untuk memastikan ibu
+                  dan bayi sentiasa sihat sepanjang kandungan.
+                </p>
+
+                <p className="mt-2">
+                  <strong>4. Ultrasound Gynae</strong> – Pemeriksaan rahim, ovari dan
+                  pelvis untuk mengesan fibroid, sista ovari atau masalah kitaran haid
+                  tidak normal.
+                </p>
+
+                <p className="mt-2">
+                  <strong>5. Saringan Ketumbuhan & Kanser</strong> – Pengesanan awal
+                  melalui pap smear, ujian HPV dan ultrasound bagi memastikan rawatan
+                  lebih berkesan dan selamat.
+                </p>
+
+                <p className="mt-2">
+                  <strong>6. Perubatan & Hormon</strong> – Rawatan menggunakan pil,
+                  suntikan atau implan bagi masalah haid tidak teratur, kesakitan
+                  pelvis dan kawalan kehamilan.
+                </p>
+
+                <p className="mt-2">
+                  <strong>7. Prolaps / Kejatuhan Rahim</strong> – Rawatan konservatif
+                  dan pembedahan untuk mengembalikan kedudukan rahim dan keselesaan
+                  wanita.
+                </p>
+
+                <p className="mt-3">
+                  Semua rawatan dimulakan dengan sesi konsultasi bagi memahami sejarah
+                  kesihatan dan keperluan pesakit. Kami turut menerangkan setiap
+                  langkah rawatan, termasuk risiko, manfaat serta jangkaan hasil,
+                  supaya pesakit sentiasa yakin dengan keputusan yang dibuat.
+                </p>
+
+                <p className="mt-2">
+                  Di bawah bimbingan <strong>Dr. Asyraf</strong>, kami komited
+                  menyediakan penjagaan menyeluruh yang menggabungkan kemahiran
+                  pembedahan moden, nasihat profesional, dan layanan yang penuh
+                  empati. Matlamat kami ialah membantu setiap wanita mencapai
+                  kesejahteraan menyeluruh – dari segi fizikal, emosi dan kualiti
+                  hidup.
                 </p>
               </div>
             </div>

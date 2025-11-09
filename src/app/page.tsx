@@ -1,4 +1,3 @@
-import TopHeader from "../components/Layouts/TopHeader";
 import Navbar from "../components/Layouts/Navbar";
 import HeroSlider from "../components/HomeOne/HeroSlider";
 import Stats from "../components/HomeOne/Stats";
@@ -14,8 +13,6 @@ import Footer from "../components/Layouts/Footer";
 export default function Home() {
   return (
     <>
-      <TopHeader />
-
       <Navbar />
 
       <HeroSlider />

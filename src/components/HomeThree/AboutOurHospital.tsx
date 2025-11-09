@@ -63,7 +63,7 @@ const AboutOurHospital: React.FC = () => {
 
             <div className="col-lg-6">
               <div className="hospital-item hospital-right">
-                <h2>About Our Hospital</h2>
+                <h2>About Dr Asyraf Clinic</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.

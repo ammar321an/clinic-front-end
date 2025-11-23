@@ -52,12 +52,39 @@ module.exports = {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
-  		}
+  			},
+  			// NEW: Adding clinic brand colors for easy access
+  			'clinic-blue': {
+  				DEFAULT: '#0046c0',
+  				50: '#e6f0ff',
+  				100: '#cce0ff',
+  				200: '#99c2ff',
+  				300: '#66a3ff',
+  				400: '#3385ff',
+  				500: '#0046c0',
+  				600: '#003899',
+  				700: '#002a73',
+  				800: '#001c4d',
+  				900: '#000e26',
+  			},
+  		},
+  		// NEW: Adding font sizes for consistency
+  		fontSize: {
+  			'2xs': '0.625rem',  // 10px
+  			'xs': '0.75rem',     // 12px - base font
+  			'sm': '0.875rem',    // 14px
+  			'base': '1rem',      // 16px
+  			'lg': '1.125rem',    // 18px
+  			'xl': '1.25rem',     // 20px
+  			'2xl': '1.5rem',     // 24px
+  			'3xl': '1.875rem',   // 30px
+  			'4xl': '2.25rem',    // 36px
+  			'5xl': '3rem',       // 48px
+  		},
   	}
   },
   plugins: [
     require("flowbite/plugin"),
-      require("tailwindcss-animate")
-],
+    require("tailwindcss-animate")
+  ],
 }

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "evt-001",
+    "title": "Consultation - John Doe",
+    "date": "2025-11-15T09:00:00.000Z",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "color": "#0046c0",
+    "description": "Regular checkup",
+    "patientName": "John Doe",
+    "appointmentId": "apt-001"
+  },
+  {
+    "id": "evt-002",
+    "title": "Team Meeting",
+    "date": "2025-11-15T14:00:00.000Z",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "color": "#10b981",
+    "description": "Monthly team sync"
+  }
+]
+

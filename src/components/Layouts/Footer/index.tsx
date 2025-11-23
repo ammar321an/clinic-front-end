@@ -110,9 +110,9 @@ const Footer: React.FC = () => {
         <div className="container">
           <div className="copyright-item">
             <p>
-              Copyright &copy; {currentYear} Design & Developed by{" "}
-              <a href="https://hibootstrap.com/" target="_blank">
-                HiBootstrap
+              Copyright &copy; {currentYear} Developed by{" "}
+              <a href="https://yaztechhub.com/" target="_blank">
+                Yaz Technology Hub
               </a>
             </p>
           </div>

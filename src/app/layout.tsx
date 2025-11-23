@@ -17,6 +17,8 @@ import { Poppins } from "next/font/google";
 import GoTop from "@/components/Layouts/GoTop";
 import FloatingActionBar from "@/components/Layouts/FloatingActionBar";
 import ConditionalTopHeader from "@/components/Layouts/ConditionalTopHeader";
+import { Toaster } from "@/components/ui/toaster"
+
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -41,6 +43,7 @@ export default function RootLayout({
         {children}
         <GoTop />
         <FloatingActionBar />
+        <Toaster />
       </body>
     </html>
   );

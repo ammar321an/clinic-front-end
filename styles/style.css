@@ -1691,7 +1691,7 @@ footer {
 
 /*-- End Counter --*/
 /*-- Appointment --*/
-.appointment-area {
+/* .appointment-area {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1772,7 +1772,7 @@ footer {
 .appointment-item .appointment-form .appointment-btn:hover {
   color: #ffffff;
   background-color: #111111;
-}
+} */
 
 /*-- End Appointment --*/
 /*----- End Home Page Two -----*/

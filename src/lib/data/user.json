@@ -1,0 +1,18 @@
+[
+  {
+    "id": "usr-001",
+    "name": "Dr. Sarah Johnson",
+    "email": "sarah.johnson@clinic.com",
+    "role": "doctor",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
+    "phone": "+60123456789",
+    "department": "Cardiology"
+  },
+  {
+    "id": "usr-002",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "role": "doctor",
+    "phone": "+60123456789"
+  }
+]

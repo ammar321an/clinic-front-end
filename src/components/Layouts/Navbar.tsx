@@ -5,9 +5,13 @@ import Link from "next/link";
 import MenuItem from "./MenuItem";
 import { menus } from "../../../libs/menus";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Stethoscope, Menu } from "lucide-react";
+import MobileSidebar from "./MobileSidebar";
 
 const Navbar: React.FC = () => {
-  const [menu, setMenu] = useState(true);
+  const [menu, setMenu] = useState(false);
+
   const toggleNavbar = () => {
     setMenu(!menu);
   };
@@ -23,20 +27,24 @@ const Navbar: React.FC = () => {
     });
   });
 
-  const classOne = menu
-    ? "collapse navbar-collapse mean-menu"
-    : "collapse navbar-collapse show";
-  const classTwo = menu
-    ? "navbar-toggler navbar-toggler-right collapsed"
-    : "navbar-toggler navbar-toggler-right";
-
   return (
     <>
       <div id="navbar" className="navbar-area sticky-top">
         <div className="main-nav">
-          <div className="container">
+          <div className="w-full max-w-7xl mx-auto px-4">
             <nav className="navbar navbar-expand-md navbar-light">
-              <Link href="/" className="navbar-brand">
+              {/* Mobile Menu Button - Only visible on mobile */}
+              <button
+                onClick={toggleNavbar}
+                className="md:hidden p-2 hover:bg-gray-100 rounded-md transition-colors"
+                type="button"
+                aria-label="Toggle navigation"
+              >
+                <Menu className="h-6 w-6 text-gray-700" />
+              </button>
+
+              {/* Logo - Hidden on mobile, visible on desktop */}
+              <Link href="/" className="navbar-brand hidden md:block">
                 <Image
                   src="/images/logo.png"
                   alt="logo"
@@ -45,22 +53,8 @@ const Navbar: React.FC = () => {
                 />
               </Link>
 
-              <button
-                onClick={toggleNavbar}
-                className={classTwo}
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span className="icon-bar top-bar"></span>
-                <span className="icon-bar middle-bar"></span>
-                <span className="icon-bar bottom-bar"></span>
-              </button>
-
-              <div className={classOne} id="navbarSupportedContent">
+              {/* Desktop Menu */}
+              <div className="hidden md:flex collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav">
                   {menus.map((menuItem) => (
                     <MenuItem key={menuItem.label} {...menuItem} />
@@ -68,24 +62,28 @@ const Navbar: React.FC = () => {
                 </ul>
               </div>
 
-              <div className="nav-srh">
-                {/* <form>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="search"
-                    placeholder="Search..."
-                  />
-
-                  <button className="search-icon icon-search">
-                    <i className="icofont-search-1"></i>
-                  </button>
-                </form> */}
+              {/* Get Appointment Button */}
+              <div className="ml-auto">
+                <Link href="/appointment">
+                  <Button 
+                    className="bg-[#0046c0] text-white hover:bg-[#003a9e] transition-all duration-300 hover:scale-105"
+                  >
+                    <Stethoscope className="mr-2 h-4 w-4" />
+                    Get Appointment
+                  </Button>
+                </Link>
               </div>
             </nav>
           </div>
         </div>
       </div>
+
+      {/* Mobile Sidebar */}
+      <MobileSidebar 
+        isOpen={menu} 
+        onClose={() => setMenu(false)} 
+        menus={menus} 
+      />
     </>
   );
 };

@@ -1,7 +1,16 @@
 "use client";
 
-import React from "react";  
+import React from "react";
 import Sidebar from "./Sidebar";
+import {
+  GraduationCap,
+  Award,
+  FileText,
+  Scissors,
+  Target,
+  Presentation,
+  Briefcase,
+} from "lucide-react";
 
 const DetailsContent: React.FC = () => {
   return (
@@ -17,71 +26,257 @@ const DetailsContent: React.FC = () => {
               <div className="doctor-details-item">
                 <div className="doctor-details-right">
                   <div className="doctor-details-biography">
-                    <h3>Dr. Sarah Taylor (Neurosurgeon)</h3>
-                    <p>MBBS in Neurology, PHD in Neurosurgeon</p>
+                    <h3>
+                      Dr. Muhammad Asyraf Azizan (Doktor Pakar Sakit Puan dan
+                      Perbidanan (O&G))
+                    </h3>
+                    <p>
+                      Master Obstetrics & Gynaecology (Universiti Malaya) |
+                      GESEA Level 2 | Subkepakaran: Advance Gynae Surgery &
+                      Laparoskopi
+                    </p>
                   </div>
 
                   <div className="doctor-details-biography">
-                    <h3>Biography</h3>
+                    <h3>
+                      <Briefcase
+                        className="d-inline-block me-2 mb-1"
+                        size={24}
+                      />
+                      Biografi
+                    </h3>
 
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum.
+                      Dr. Muhammad Asyraf Azizan ialah seorang Doktor Pakar
+                      Sakit Puan dan Perbidanan (O&G) dengan subkepakaran dalam
+                      Advance Gynae Surgery dan Laparoskopi, serta pemegang
+                      GESEA Level 2. Beliau komited dalam memberikan rawatan
+                      moden, selamat dan berasaskan bukti kepada setiap pesakit,
+                      dengan penekanan terhadap teknik perubatan dan pembedahan
+                      yang minimal invasif.
                     </p>
 
                     <p>
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem accusantium doloremque laudantium, totam rem
-                      aperiam, eaque ipsa quae ab illo inventore veritatis et
-                      quasi architecto beatae vitae dicta sunt explicabo. Nemo
-                      enim ipsam voluptatem quia voluptas sit aspernatur aut
-                      odit aut fugit, sed quia consequuntur magni dolores eos
-                      qui ratione voluptatem sequi nesciunt.
+                      Sejak peringkat awal persekolahan, Dr. Asyraf menunjukkan
+                      kecemerlangan akademik dengan memperoleh UPSR 5A, PMR 8A
+                      dan SPM 9A di MRSM Bitara Langkawi. Beliau seterusnya
+                      melanjutkan pengajian kedoktoran di Setchenov Moscow
+                      Medical Academy, Rusia, sebelum meneruskan latihan
+                      kepakaran Master Obstetrics & Gynaecology di Universiti
+                      Malaya. Keghairahan beliau dalam bidang pembedahan lanjut
+                      membawa kepada latihan subkepakaran Minimally Invasive
+                      Surgery / Laparoscopy (GESEA, Eropah).
                     </p>
 
                     <p>
-                      But I must explain to you how all this mistaken idea of
-                      denouncing pleasure and praising pain was born and I will
-                      give you a complete account of the system, and expound the
-                      actual teachings of the great explorer of the truth, the
-                      master-builder of human happiness. No one rejects,
-                      dislikes, or avoids pleasure itself, because it is
-                      pleasure, but because those who do not know how to pursue
-                      pleasure rationally encounter consequences that are
-                      extremely painful.
+                      Beliau memulakan kerjayanya sebagai pegawai perubatan
+                      siswazah di Hospital Tuanku Fauziah, Kangar (2010–2015).
+                      Latihan kepakarannya diteruskan di Hospital Kuala Lumpur
+                      (2015–2017) dan Universiti Malaya (2017–2019). Setelah
+                      bergelar pakar, beliau berkhidmat di Hospital Duchess of
+                      Kent, Sandakan, Sabah, sebelum menyambung latihan
+                      subkepakaran dalam Gynae-Oncology di beberapa pusat
+                      tersohor: Hospital Serdang (2022–2023), Hospital Sultan
+                      Ismail, Johor Bahru (2023–2024) dan UMMC (2024–2025).
+                      Beliau turut menabur bakti di Hospital Tanjong Karang dari
+                      April hingga Ogos 2025.
                     </p>
 
-                    <p></p>
+                    <p>
+                      Dalam kerjaya dan perkhidmatannya, Dr. Asyraf berpegang
+                      kepada misi untuk mengaplikasi teknik perubatan terkini
+                      serta mempromosikan kaedah kelahiran yang selamat dan
+                      patuh syarak. Beliau berwawasan untuk meningkatkan
+                      kepakaran dalam bidang perubatan dan pembedahan demi
+                      manfaat masyarakat sejagat, sambil mengekalkan nilai
+                      peribadi seperti rendah diri, saling menghormati serta
+                      proaktif dalam memajukan bidang O&G.
+                    </p>
                   </div>
 
                   <div className="doctor-details-biography">
-                    <h3>Education</h3>
+                    <h3>
+                      <GraduationCap
+                        className="d-inline-block me-2 mb-1"
+                        size={24}
+                      />
+                      Pendidikan
+                    </h3>
                     <ul>
                       <li>
-                        PHD Degree in Neurology at University of UCLan School of
-                        Medicine Preston (2006)
+                        UPSR 5A, PMR 8A, SPM 9A - MRSM Bitara Langkawi
                       </li>
                       <li>
-                        Master of Neurosurgery at University of University of
-                        Exeter Medical School Exeter (2002)
+                        Ijazah Kedoktoran - Setchenov Moscow Medical Academy,
+                        Rusia
+                      </li>
+                      <li>
+                        Master Obstetrics & Gynaecology - Universiti Malaya
+                        (2017-2019)
+                      </li>
+                      <li>
+                        Subkepakaran Minimally Invasive Surgery / Laparoscopy
+                        (GESEA Level 2, Eropah)
+                      </li>
+                      <li>
+                        Latihan Subkepakaran Gynae-Oncology:
+                        <ul>
+                          <li>Hospital Serdang (2022–2023)</li>
+                          <li>
+                            Hospital Sultan Ismail, Johor Bahru (2023–2024)
+                          </li>
+                          <li>UMMC (2024–2025)</li>
+                        </ul>
                       </li>
                     </ul>
                   </div>
 
                   <div className="doctor-details-biography">
-                    <h3>Experience</h3>
+                    <h3>
+                      <Presentation
+                        className="d-inline-block me-2 mb-1"
+                        size={24}
+                      />
+                      Pembentangan & Penyelidikan Antarabangsa
+                    </h3>
                     <p>
-                      At vero eos et accusamus et iusto odio dignissimos ducimus
-                      qui blanditiis praesentium voluptatum deleniti atque
-                      corrupti quos dolores et quas molestias excepturi sint
-                      occaecati cupiditate non provident, similique sunt in
-                      culpa.
+                      Beliau telah diberi peluang mewakili institusi dalam
+                      beberapa kongres perubatan utama di Malaysia, Asia dan
+                      antarabangsa:
+                    </p>
+                    <ul>
+                      <li>
+                        <strong>2019 – Perak (PSM Congress)</strong>
+                        <br />
+                        POWER Study – kajian klinikal yang mengkaji pencegahan
+                        diabetes gestasi melalui senaman berjalan berasaskan
+                        pedometer.
+                      </li>
+                      <li>
+                        <strong>2019 – Korea Selatan (ASGO)</strong>
+                        <br />
+                        Pembentangan mengenai keganasan ovari yang tidak
+                        dijangka selepas laparoskopi, berdasarkan pengalaman di
+                        Universiti Malaya.
+                      </li>
+                      <li>
+                        <strong>2022 – OGSM International Congress</strong>
+                        <br />
+                        Kehamilan ovari — laporan kes unik yang jarang berlaku.
+                      </li>
+                      <li>
+                        <strong>2024 – OGSM International Congress</strong>
+                        <br />
+                        Kes tumor Ancient Vaginal Schwannoma, antara kes yang
+                        sangat jarang direkodkan.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="doctor-details-biography">
+                    <h3>
+                      <FileText
+                        className="d-inline-block me-2 mb-1"
+                        size={24}
+                      />
+                      Penerbitan Akademik
+                    </h3>
+                    <p>
+                      Beliau turut menghasilkan beberapa penerbitan dalam
+                      jurnal perubatan tempatan dan antarabangsa:
+                    </p>
+                    <ul>
+                      <li>POWER Study – proses penerbitan</li>
+                      <li>
+                        Ovarian Malignancy Following Laparoscopy – proses
+                        penerbitan
+                      </li>
+                      <li>
+                        Primary Unruptured Ovarian Pregnancy – diterbitkan dalam
+                        Annals Case Report & Medical Journal of Malaysia
+                      </li>
+                      <li>Ancient Vaginal Schwannoma – proses penerbitan</li>
+                    </ul>
+                  </div>
+
+                  <div className="doctor-details-biography">
+                    <h3>
+                      <Award className="d-inline-block me-2 mb-1" size={24} />
+                      Anugerah & Pengiktirafan
+                    </h3>
+                    <p>
+                      Beliau menerima beberapa pengiktirafan atas usaha dalam
+                      bidang perubatan wanita:
+                    </p>
+                    <ul className="mb-4">
+                      <li>Best Oral Obstetrics Presentation Award (2019)</li>
+                      <li>Finalist ASGO 2019 – Korea</li>
+                      <li>Finalist Poster Presentation OGSM 2022</li>
+                      <li>Anugerah Perkhidmatan Cemerlang 2021 (APC)</li>
+                      <li>Finalist Poster Presentation OGSM 2024</li>
+                    </ul>
+                    <p>
+                      Pengiktirafan ini mengukuhkan komitmen beliau dalam
+                      menyediakan rawatan berkualiti tinggi yang berasaskan
+                      bukti (evidence-based).
+                    </p>
+                  </div>
+
+                  <div className="doctor-details-biography">
+                    <h3>
+                      <Scissors className="d-inline-block me-2 mb-1" size={24} />
+                      Kemahiran & Pengalaman Pembedahan
+                    </h3>
+                    <p>
+                      Dengan pengalaman mengendalikan ratusan pembedahan
+                      kompleks, beliau berpengalaman luas dalam:
+                    </p>
+
+                    <h4 className="mt-4">Pembedahan Invasif (6 bulan terkini)</h4>
+                    <ul>
+                      <li>Total abdominal hysterectomy + BSO: 20–30 kes</li>
+                      <li>Laparoscopic hysterectomy + BSO: 20–30 kes</li>
+                      <li>Pelvic lymph node dissection: 10–20 kes</li>
+                      <li>Omentectomy: 10–20 kes</li>
+                      <li>Adhesiolysis: 20–30 kes</li>
+                      <li>Pelvic exenteration: 3 kes</li>
+                      <li>Radical hysterectomy: 20–30 kes</li>
+                      <li>
+                        Lain-lain pembedahan lanjutan laparoskopi & onkologi
+                        wanita
+                      </li>
+                    </ul>
+
+                    <h4 className="mt-4">Prosedur Ginekologi Tidak Invasif</h4>
+                    <ul>
+                      <li>LLETZ & cone biopsy</li>
+                      <li>Colposcopy</li>
+                      <li>Hysteroscopy</li>
+                      <li>D&C diagnostik</li>
+                      <li>Forceps & vacuum-assisted delivery</li>
+                    </ul>
+                  </div>
+
+                  <div className="doctor-details-biography">
+                    <h3>
+                      <Target className="d-inline-block me-2 mb-1" size={24} />
+                      Misi
+                    </h3>
+                    <p>
+                      Untuk memastikan setiap wanita mendapat pilihan rawatan
+                      yang:
+                    </p>
+                    <ul className="mb-4">
+                      <li>Lebih selamat</li>
+                      <li>Kurang sakit</li>
+                      <li>Risiko lebih rendah</li>
+                      <li>Pulih lebih cepat</li>
+                    </ul>
+                    <p>
+                      Dengan teknik pembedahan moden seperti laparoskopi &
+                      VNOTES, beliau percaya setiap pesakit berhak mendapat
+                      rawatan terbaik yang minimally invasive, high precision
+                      dan berpusatkan pesakit.
                     </p>
                   </div>
                 </div>

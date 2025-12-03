@@ -12,14 +12,28 @@ export const WORKING_DAYS = [1, 2, 3, 4, 5, 6] // Monday to Saturday (0 = Sunday
 export const APPOINTMENT_DURATION_MINUTES = 30 // Change to 60 for 1-hour slots
 
 export const WORKING_HOURS = {
-  start: 9, // 9 AM
-  end: 17,  // 5 PM
+  default: {
+    start: 9,  // 9 AM
+    end: 17,   // 5 PM
+  },
+  saturday: {
+    start: 9,  // 9 AM
+    end: 13,   // 1 PM
+  }
 } as const
 
 // Generate time slots based on duration
-export function generateTimeSlots(durationMinutes: number = APPOINTMENT_DURATION_MINUTES) {
+export function generateTimeSlots(
+  durationMinutes: number = APPOINTMENT_DURATION_MINUTES,
+  selectedDate?: Date
+) {
   const slots: string[] = []
-  const { start, end } = WORKING_HOURS
+  
+  // Check if selected date is Saturday (day 6)
+  const isSaturday = selectedDate ? selectedDate.getDay() === 6 : false
+  
+  // Use Saturday hours if it's Saturday, otherwise use default hours
+  const { start, end } = isSaturday ? WORKING_HOURS.saturday : WORKING_HOURS.default
   
   for (let hour = start; hour < end; hour++) {
     for (let minute = 0; minute < 60; minute += durationMinutes) {

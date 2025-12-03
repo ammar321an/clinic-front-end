@@ -53,7 +53,7 @@ const OurExpertise: React.FC = () => {
                         <i className="icofont-check-circled"></i>
                         <h3>24 Hour Doctor</h3>
                         <p>
-                          Lorem ipsum dolor sit amet, is consectetur adipiscing
+                          Perkhidmatan doktor sepanjang masa bagi memastikan rawatan diterima tanpa kelewatan.
                         </p>
                       </div>
                     </div>
@@ -79,7 +79,7 @@ const OurExpertise: React.FC = () => {
                     <i className="icofont-ui-call"></i>
                   </div>
                   <h3>Emergency Call</h3>
-                  <p>+07 554 332 322</p>
+                  <p>+03 8769 9520</p>
                 </div>
               </div>
             </div>

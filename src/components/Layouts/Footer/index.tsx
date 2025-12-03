@@ -50,17 +50,23 @@ const Footer: React.FC = () => {
                       <Link href="/about">About us</Link>
                     </li>
                     <li>
-                      <Link href="/about">Blog</Link>
+                      <Link href="/">Home</Link>
                     </li>
                     <li>
-                      <Link href="/blog/details">Our Expertise</Link>
+                      <Link href="/blog">Blog</Link>
                     </li>
+                    <li>
+                      <Link href="/appointment">Get Appointment</Link>
+                    </li>
+                    {/* <li>
+                      <Link href="/blog/details">Our Expertise</Link>
+                    </li> */}
                     {/* <li>
                       <Link href="/faq">Faq</Link>
                     </li> */}
-                    <li>
+                    {/* <li>
                       <Link href="/doctor">Doctors</Link>
-                    </li>
+                    </li> */}
                     <li>
                       <Link href="/contact">Contact us</Link>
                     </li>
@@ -75,22 +81,7 @@ const Footer: React.FC = () => {
                   <h3>Our Services</h3>
                   <ul>
                     <li>
-                      <Link href="/services/details">Dental Care</Link>
-                    </li>
-                    <li>
-                      <Link href="/services/details">Cardiology</Link>
-                    </li>
-                    <li>
-                      <Link href="/services/details">Hijama Therapy</Link>
-                    </li>
-                    <li>
-                      <Link href="/services/details">Massage Therapy</Link>
-                    </li>
-                    <li>
-                      <Link href="/services/details">Ambluance Sevices</Link>
-                    </li>
-                    <li>
-                      <Link href="/services/details">Medicine</Link>
+                      <Link href="/services/details">Service Details</Link>
                     </li>
                   </ul>
                 </div>

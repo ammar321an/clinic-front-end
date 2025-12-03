@@ -88,27 +88,18 @@
   }
 }
 
-@media (max-width: 768px) {
-  /* Services, Doctor, Time dropdowns */
-  [role="combobox"] {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    text-align: left !important;
-  }
-  
-  [role="combobox"] > span {
-    display: flex !important;
-    align-items: center !important;
-    width: 100% !important;
-    text-align: left !important;
-  }
-
-  /* Date picker button */
-  button[aria-haspopup="dialog"] {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    text-align: left !important;
-  }
+/* Make all placeholder text 14px in appointment form */
+.appointment-form-fix input::placeholder,
+.appointment-form-fix textarea::placeholder,
+.appointment-form-fix [role="combobox"] > span[style*="pointer-events"],
+.appointment-form-fix button[aria-haspopup="dialog"] > span {
+  font-size: 14px !important;
 }
+
+/* Also set the input text size to 14px when typing */
+.appointment-form-fix input,
+.appointment-form-fix textarea {
+  font-size: 14px !important;
+}
+
+

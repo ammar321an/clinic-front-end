@@ -2,8 +2,13 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Stethoscope, Loader2 } from "lucide-react";
 
 const AppointmentFormTwo: React.FC = () => {
+  const [isLoading, setIsLoading] = React.useState(false);
+
   return (
     <>
       <div className="appointment-area-three">
@@ -16,96 +21,41 @@ const AppointmentFormTwo: React.FC = () => {
                   backgroundImage: `url(/images/home-two/home-2-hart-shape.jpg)`,
                 }}
               >
-                <h2>Book your appointment</h2>
-                <span>We will confirm your appointment within 2 hours</span>
+                <h2>Book your appointment</h2><br />
 
                 <div className="appointment-form">
-                  <form>
-                    <div className="row">
-                      <div className="col-lg-6">
-                        <div className="form-group">
-                          <i className="icofont-business-man-alt-1"></i>
-                          <label>Name</label>
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Enter Your Name"
-                          />
-                        </div>
-                      </div>
+                  <div className="appointment-description">
+                    <p style={{ fontSize: '16px', lineHeight: '1.8', color: '#555', marginBottom: '20px' }}>
+                      Tempah temujanji anda dengan Klinik Dr. Asyraf hari ini. Kami menyediakan perkhidmatan ginekologi dan obstetrik yang komprehensif untuk kesihatan dan kesejahteraan anda.
+                    </p>
+                    <p style={{ fontSize: '16px', lineHeight: '1.8', color: '#555', marginBottom: '30px' }}>
+                      Klik butang di bawah untuk membuat temujanji. Kami akan mengesahkan temujanji anda dalam masa 2 jam semasa waktu pejabat.
+                    </p>
+                  </div>
 
-                      <div className="col-lg-6">
-                        <div className="form-group">
-                          <i className="icofont-ui-message"></i>
-                          <label>Email</label>
-                          <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Enter Your Email"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="col-lg-6">
-                        <div className="form-group">
-                          <i className="icofont-ui-call"></i>
-                          <label>Phone</label>
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Enter Your Number"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="col-lg-6">
-                        <div className="form-group">
-                          <i className="icofont-hospital"></i>
-                          <label>Services</label>
-                          <select
-                            className="form-control"
-                            id="exampleFormControlSelect1"
-                          >
-                            <option>Dental Care</option>
-                            <option>Pathology</option>
-                            <option>Diagnosis</option>
-                            <option>Neurology</option>
-                            <option>Cardiology</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div className="col-lg-6">
-                        <div className="form-group">
-                          <i className="icofont-doctor"></i>
-                          <label>Doctor</label>
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Choose Your Doctor"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="col-lg-6">
-                        <div className="form-group">
-                          <i className="icofont-business-man"></i>
-                          <label>Age</label>
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Your Age"
-                          />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="text-center">
-                      <button type="submit" className="btn appointment-btn">
-                        Submit
-                      </button>
-                    </div>
-                  </form>
+                  {/* Get Appointment Button */}
+                  <div className="text-center">
+                    <Link href="/appointment">
+                      <Button 
+                        className="bg-[#0046c0] text-white hover:bg-[#003a9e] transition-all duration-300 hover:scale-105"
+                        style={{ padding: '12px 32px', fontSize: '16px' }}
+                        onClick={() => setIsLoading(true)}
+                        disabled={isLoading}
+                      >
+                        {isLoading ? (
+                          <>
+                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                            Loading...
+                          </>
+                        ) : (
+                          <>
+                            <Stethoscope className="mr-2 h-4 w-4" />
+                            Get Appointment
+                          </>
+                        )}
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -127,7 +77,7 @@ const AppointmentFormTwo: React.FC = () => {
                     <i className="icofont-ui-call"></i>
                   </div>
                   <h3>Emergency Call</h3>
-                  <p>+07 554 332 322</p>
+                  <p>+03 8769 9520</p>
                 </div>
               </div>
             </div>

@@ -7,9 +7,9 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { format } from "date-fns";
-import { CalendarIcon, InfoIcon } from "lucide-react";
+import { CalendarIcon, InfoIcon, Loader2 } from "lucide-react";
 import { publicAppointmentService } from "@/services/public-appointment.service";
-import { SERVICES, generateTimeSlots, TOOLTIP_CONTENT, WORKING_DAYS } from "@/constants/appointment.constants";
+import { SERVICES, generateTimeSlots, TOOLTIP_CONTENT, WORKING_DAYS, APPOINTMENT_DURATION_MINUTES } from "@/constants/appointment.constants";
 import { useToast } from "@/hooks/use-toast";
 import type { Doctor } from "@/types/appointment";
 
@@ -20,7 +20,6 @@ import {
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -75,6 +74,7 @@ const AppointmentForm: React.FC = () => {
   const searchParams = useSearchParams();
   const [showSuccessDialog, setShowSuccessDialog] = useState(false);
   const [appointmentResponse, setAppointmentResponse] = useState<any>(null);
+  const [isCalendarOpen, setIsCalendarOpen] = useState(false);
 
   const form = useForm<FormSchema>({
     resolver: zodResolver(formSchema),
@@ -171,8 +171,8 @@ const AppointmentForm: React.FC = () => {
 
   // Generate available time slots
   const getAvailableTimeSlots = () => {
-    const allSlots = generateTimeSlots();
     const selectedDate = form.watch("appointmentDate");
+    const allSlots = generateTimeSlots(APPOINTMENT_DURATION_MINUTES, selectedDate);
     
     if (!selectedDate) return allSlots;
 
@@ -248,7 +248,7 @@ const AppointmentForm: React.FC = () => {
       sessionStorage.setItem('appointment_success', JSON.stringify(response.data));
 
       // Update URL with appointment ID
-      const newUrl = `/appointment?id=${response.data.appointment_id}`;
+      const newUrl = `/appointment?appointment_id=${response.data.appointment_id}`;
       router.push(newUrl, { scroll: false });
 
       // Show success dialog
@@ -402,14 +402,14 @@ const AppointmentForm: React.FC = () => {
                             <FormItem>
                               <Select onValueChange={field.onChange} value={field.value}>
                                 <FormControl>
-                                  <SelectTrigger className="w-full h-10 px-3 pr-10 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white">
-                                    <SelectValue placeholder="Select a service" className="truncate" />
+                                  <SelectTrigger className="w-full h-10 px-3 pr-10 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white flex items-center justify-between">
+                                    <span className="truncate text-left block flex-1">{field.value || "Select a service"}</span>
                                   </SelectTrigger>
                                 </FormControl>
-                                <SelectContent className="bg-white">
+                                <SelectContent className="bg-white max-w-[400px] w-auto">
                                   {SERVICES.map((service) => (
-                                    <SelectItem key={service} value={service} className="max-w-[300px]">
-                                      <div className="truncate">{service}</div>
+                                    <SelectItem key={service} value={service} className="max-w-none">
+                                      <div className="whitespace-normal break-words">{service}</div>
                                     </SelectItem>
                                   ))}
                                 </SelectContent>
@@ -434,7 +434,7 @@ const AppointmentForm: React.FC = () => {
                                 disabled={loadingDoctors}
                               >
                                 <FormControl>
-                                  <SelectTrigger className="w-full h-10 px-3 pr-10 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white disabled:opacity-50 disabled:cursor-not-allowed">
+                                  <SelectTrigger className="w-full h-10 px-3 pr-10 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white disabled:opacity-50 disabled:cursor-not-allowed flex items-center">
                                     <SelectValue placeholder="Choose Your Doctor" className="truncate" />
                                   </SelectTrigger>
                                 </FormControl>
@@ -460,13 +460,13 @@ const AppointmentForm: React.FC = () => {
                           name="appointmentDate"
                           render={({ field }) => (
                             <FormItem>
-                              <Popover>
+                              <Popover open={isCalendarOpen} onOpenChange={setIsCalendarOpen}>
                                 <PopoverTrigger asChild>
                                   <FormControl>
                                     <Button
                                       variant="outline"
-                                      disabled={!form.watch("doctorId")} // Disable until doctor selected
-                                      className={`w-full h-10 px-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-left font-normal justify-start disabled:opacity-50 disabled:cursor-not-allowed ${
+                                      disabled={!form.watch("doctorId")}
+                                      className={`w-full h-10 px-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-left font-normal flex items-center justify-start disabled:opacity-50 disabled:cursor-not-allowed ${
                                         !field.value && "text-gray-500"
                                       }`}
                                     >
@@ -475,19 +475,22 @@ const AppointmentForm: React.FC = () => {
                                     </Button>
                                   </FormControl>
                                 </PopoverTrigger>
-                                <PopoverContent className="w-auto p-0 bg-white" align="start">
-                                  <Calendar
-                                    mode="single"
-                                    selected={field.value}
-                                    onSelect={(date) => {
-                                      handleDateChange(date);
-                                      // Auto-close the popover by triggering a blur event
-                                      document.body.click();
-                                    }}
-                                    disabled={disabledDays}
-                                    initialFocus
-                                  />
-                                </PopoverContent>
+                                  <PopoverContent 
+                                    className="w-auto p-0 bg-white rounded-lg overflow-hidden" 
+                                    align="start"
+                                  >
+                                    <Calendar
+                                      mode="single"
+                                      selected={field.value}
+                                      onSelect={(date) => {
+                                        handleDateChange(date);
+                                        setIsCalendarOpen(false);
+                                      }}
+                                      disabled={disabledDays}
+                                      initialFocus
+                                      className="rounded-lg"
+                                    />
+                                  </PopoverContent>
                               </Popover>
                               <FormMessage className="text-xs text-red-600 mt-1" />
                             </FormItem>
@@ -509,8 +512,8 @@ const AppointmentForm: React.FC = () => {
                                 disabled={!form.watch("doctorId") || !form.watch("appointmentDate") || loadingSlots}
                               >
                                 <FormControl>
-                                  <SelectTrigger className="w-full h-10 px-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white disabled:opacity-50 disabled:cursor-not-allowed">
-                                    <SelectValue placeholder="Select a time slot" />
+                                  <SelectTrigger className="w-full h-10 px-3 pr-10 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white flex items-center">
+                                    <SelectValue placeholder="Select a service" className="truncate text-left" />  {/* ADD text-left */}
                                   </SelectTrigger>
                                 </FormControl>
                                 <SelectContent className="bg-white">
@@ -600,7 +603,14 @@ const AppointmentForm: React.FC = () => {
                         className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-md disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                         disabled={isSubmitting}
                       >
-                        {isSubmitting ? "Submitting..." : "Submit"}
+                        {isSubmitting ? (
+                          <>
+                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                            Submitting...
+                          </>
+                        ) : (
+                          "Submit"
+                        )}
                       </Button>
                     </div>
                   </form>
@@ -622,7 +632,7 @@ const AppointmentForm: React.FC = () => {
                   <li>Wednesday <span>9:00 AM - 5:00 PM</span></li>
                   <li>Thursday <span>9:00 AM - 5:00 PM</span></li>
                   <li>Friday <span>9:00 AM - 5:00 PM</span></li>
-                  <li>Saturday <span>9:00 AM - 5:00 PM</span></li>
+                  <li>Saturday <span>9:00 AM - 1:00 PM</span></li>
                 </ul>
               </div>
             </div>

@@ -39,16 +39,22 @@ const Sidebar: React.FC = () => {
             <div className="appointment-item-content">
               <ul>
                 <li>
-                  Monday <span>9:00 AM - 8:00 PM</span>
+                  Monday <span>9:00 AM - 5:00 PM</span>
                 </li>
                 <li>
-                  Tuesday <span>9:00 AM - 8:00 PM</span>
+                  Tuesday <span>9:00 AM - 5:00 PM</span>
                 </li>
                 <li>
-                  Wednesday <span>9:00 AM - 8:00 PM</span>
+                  Wednesday <span>9:00 AM - 5:00 PM</span>
                 </li>
                 <li>
-                  Sunday <span>9:00 AM - 8:00 PM</span>
+                  Thursday <span>9:00 AM - 5:00 PM</span>
+                </li>
+                <li>
+                  Friday <span>9:00 AM - 5:00 PM</span>
+                </li>
+                <li>
+                  Saturday <span>9:00 AM - 1:00 PM</span>
                 </li>
               </ul>
             </div>

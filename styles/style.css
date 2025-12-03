@@ -2557,17 +2557,55 @@ footer {
 .doctor-details-item .doctor-details-biography p:last-child {
   margin-bottom: 0;
 }
+/* Doctor Details Biography - Updated List Styles */
 .doctor-details-item .doctor-details-biography ul {
   margin: 0;
   padding: 0;
+  padding-left: 20px; /* Add left padding for bullets */
 }
+
 .doctor-details-item .doctor-details-biography ul li {
-  list-style-type: none;
-  display: block;
+  list-style-type: disc; /* Show bullet points */
+  display: list-item; /* Change from block to list-item */
   margin-bottom: 15px;
+  margin-left: 20px; /* Add left margin */
 }
+
 .doctor-details-item .doctor-details-biography ul li:last-child {
   margin-bottom: 0;
+}
+
+/* For nested lists (sub-lists) */
+.doctor-details-item .doctor-details-biography ul ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.doctor-details-item .doctor-details-biography ul ul li {
+  list-style-type: circle; /* Different bullet for nested lists */
+  margin-bottom: 8px;
+}
+
+/* Styling for list items with strong tags (bolded text) */
+.doctor-details-item .doctor-details-biography ul li strong {
+  color: #232323;
+  font-weight: 600;
+}
+
+/* Optional: Style for icons in headings - ensure proper spacing */
+.doctor-details-item .doctor-details-biography h3 svg,
+.doctor-details-item .doctor-details-biography h3 i {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* Ensure h4 subheadings have proper spacing */
+.doctor-details-item .doctor-details-biography h4 {
+  font-weight: 600;
+  font-size: 18px;
+  color: #232323;
+  margin-top: 25px;
+  margin-bottom: 15px;
 }
 
 /*-- End Doctor Details --*/
@@ -3018,10 +3056,14 @@ footer {
 /*----- Contact Page -----*/
 /*-- Location --*/
 .location-wrap .location-item {
-  margin-bottom: 30px;
+  margin-bottom: 0;
   text-align: center;
   border: 1px solid #eee;
   padding: 30px 15px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 .location-wrap .location-item i {
   display: inline-block;
@@ -3033,6 +3075,8 @@ footer {
   text-align: center;
   font-size: 32px;
   margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #0046c0;
 }
 .location-wrap .location-item h3 {

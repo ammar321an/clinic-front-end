@@ -16,8 +16,8 @@ const ContactInfo: React.FC = () => {
                 <i className="icofont-ui-call"></i>
                 <div className="emergency-inner">
                   <h3>Emergency Call</h3>
-                  <p>+07 5554 3332 322</p>
-                  <p>+07 5554 3332 456</p>
+                  <p>+03 8769 9520</p>
+                  <p>+03 8769 9520</p>
                 </div>
               </div>
             </div>

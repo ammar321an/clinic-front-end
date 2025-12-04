@@ -2261,47 +2261,51 @@ footer {
 
 .page-title-item {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
 .page-title-item h2 {
   color: #f8f8f8;
   font-weight: 700;
   font-size: 48px;
   margin-bottom: 20px;
 }
-.page-title-item ul {
-  margin: 0;
-  padding: 0;
-}
-.page-title-item ul li {
-  list-style-type: none;
-  display: inline-block;
-  color: #f8f8f8;
-  font-weight: 600;
-  font-size: 18px;
-  margin-right: 25px;
-  position: relative;
-}
-.page-title-item ul li:last-child {
-  margin-right: 0;
-}
-.page-title-item ul li a {
-  display: inline-block;
-  color: #f8f8f8;
-}
-.page-title-item ul li a:hover {
-  color: #111111;
-}
-.page-title-item ul li::before {
-  content: ">";
-  position: absolute;
-  right: -17px;
-  top: 1px;
-}
-.page-title-item ul li:last-child::before {
-  display: none;
+
+.page-title-item nav[aria-label="breadcrumb"] {
+  width: 100%;
 }
 
-/*-- End Page Title --*/
+.page-title-item nav[aria-label="breadcrumb"] ol {
+  justify-content: center !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.page-title-item nav[aria-label="breadcrumb"] a,
+.page-title-item nav[aria-label="breadcrumb"] span {
+  color: #f8f8f8 !important;
+  font-weight: 600 !important;
+}
+
+.page-title-item nav[aria-label="breadcrumb"] a:hover {
+  color: #ffffff !important;
+}
+
+.page-title-item nav[aria-label="breadcrumb"] svg {
+  color: #f8f8f8 !important;
+  stroke-width: 5 !important;
+}
+.page-title-item nav[aria-label="breadcrumb"] a {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.page-title-item nav[aria-label="breadcrumb"] a:hover {
+  transform: scale(1.1);
+}
 /*-- Doctor Search --*/
 .doctor-search-wrap {
   padding-top: 45px;

@@ -31,17 +31,17 @@ const FloatingActionBar: React.FC = () => {
   }, [lastScrollY]);
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/60123456789", "_blank");
+    window.open("https://wa.me/60194565039", "_blank");
   };
 
   const handleCall = () => {
-    window.location.href = "tel:+60123456789";
+    window.location.href = "tel:+60194565039";
   };
 
   const handleMap = () => {
     // Coordinates for KL (example)
-    const lat = 3.139;
-    const lng = 101.6869;
+    const lat = 2.9999093;
+    const lng = 101.7857178;
     window.open(`https://www.google.com/maps?q=${lat},${lng}`, "_blank");
   };
 

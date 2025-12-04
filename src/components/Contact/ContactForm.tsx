@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
@@ -25,7 +25,7 @@ const formSchema = z.object({
 
 type FormSchema = z.infer<typeof formSchema>;
 
-const ContactForm: React.FC = () => {
+const ContactFormContent: React.FC = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const router = useRouter();
@@ -290,6 +290,14 @@ const ContactForm: React.FC = () => {
         messageData={messageResponse}
       />
     </>
+  );
+};
+
+const ContactForm: React.FC = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ContactFormContent />
+    </Suspense>
   );
 };
 

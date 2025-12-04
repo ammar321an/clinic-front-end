@@ -60,7 +60,7 @@ const RedFlagContent: React.FC<RedFlagContentProps> = ({ images }) => {
                 ginekologi.
                 </p>
 
-                <h2>⚠️ 10 Simptom "Red Flag" Wanita Perlu Tahu</h2>
+                <h2>⚠️ 10 Simptom &ldquo;Red Flag&rdquo; Wanita Perlu Tahu</h2>
                 <ul className="custom-numbered-list">
                     <li>
                         <span className="list-title">Pendarahan faraj yang tidak normal</span>

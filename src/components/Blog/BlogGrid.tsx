@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo } from "react";
+import React, { useMemo, Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useSearchParams, useRouter } from "next/navigation";
@@ -16,7 +16,7 @@ import {
 import { blogPosts } from "@/data/dummy/blogPosts";
 import { truncateText } from "@/lib/textUtils";
 
-const BlogGrid: React.FC = () => {
+const BlogGridContent: React.FC = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
   const currentPage = Number(searchParams.get("page")) || 1;
@@ -136,6 +136,14 @@ const BlogGrid: React.FC = () => {
         </div>
       </div>
     </>
+  );
+};
+
+const BlogGrid: React.FC = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <BlogGridContent />
+    </Suspense>
   );
 };
 

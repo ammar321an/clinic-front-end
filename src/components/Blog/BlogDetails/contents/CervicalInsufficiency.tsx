@@ -87,7 +87,7 @@ const CervicalInsufficiencyContent: React.FC<CervicalInsufficiencyContentProps> 
                         Keluar lendir faraj yang luar biasa
                     </li>
                     <li>
-                        Rasa seperti janin "menurun" terlalu awal
+                        Rasa seperti janin &ldquo;menurun&rdquo; terlalu awal
                     </li>
                     <li>
                         Sakit belakang ringan yang berpanjangan

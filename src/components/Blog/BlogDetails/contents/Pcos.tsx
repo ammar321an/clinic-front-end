@@ -133,7 +133,7 @@ const PcosContent: React.FC<PcosContentProps> = ({ images }) => {
                 </ul>
 
                 <h2>Pengurusan Harian PCOS: Apa Yang Boleh Anda Lakukan</h2>
-                <p>Walaupun PCOS tidak mempunyai "penyembuhan", ia boleh dikawal dengan strategi gaya hidup dan perubatan:</p>
+                <p>Walaupun PCOS tidak mempunyai &ldquo;penyembuhan&rdquo;, ia boleh dikawal dengan strategi gaya hidup dan perubatan:</p>
 
                 <ul className="custom-numbered-list">
                     <li>

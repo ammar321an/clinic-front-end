@@ -214,7 +214,7 @@ const BlogDetailsContent: React.FC = () => {
                     Kesimpulan
                   </h5>
                   <p>
-                    Endometriosis bukan sekadar "senggugut kuat". Ia adalah <span className="font-semibold">penyakit sebenar</span> yang menjejaskan 
+                    Endometriosis bukan sekadar &ldquo;senggugut kuat&rdquo;. Ia adalah <span className="font-semibold">penyakit sebenar</span> yang menjejaskan 
                     tubuh dan jiwa. Lebih awal ia dikesan dan dirawat, lebih tinggi peluang untuk mengawal 
                     simptom dan melindungi kesuburan anda.
                   </p>

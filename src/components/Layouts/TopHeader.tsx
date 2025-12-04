@@ -1,6 +1,7 @@
 "use client";
   
 import React from "react";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const TopHeader: React.FC = () => {
   return (
@@ -38,23 +39,18 @@ const TopHeader: React.FC = () => {
                 <div className="header-top-right">
                   <ul>
                     <li>
-                      <a href="https://www.facebook.com/" target="_blank">
-                        <i className="icofont-facebook"></i>
+                      <a href="https://www.facebook.com/ashralf.azizan" target="_blank">
+                        <i className="fa-brands fa-facebook"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="https://twitter.com/" target="_blank">
-                        <i className="icofont-twitter"></i>
+                      <a href="https://www.linkedin.com/in/muhammad-asyraf-azizan-2271731b9/" target="_blank">
+                        <i className="fa-brands fa-linkedin"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.linkedin.com/" target="_blank">
-                        <i className="icofont-linkedin"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.instagram.com/" target="_blank">
-                        <i className="icofont-instagram"></i>
+                      <a href="https://www.tiktok.com/@ashralf86" target="_blank">
+                        <i className="fa-brands fa-tiktok"></i>
                       </a>
                     </li>
                   </ul>

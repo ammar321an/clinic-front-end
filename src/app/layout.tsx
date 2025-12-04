@@ -27,8 +27,16 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Disin - React Nextjs Medical Health & Doctors Template",
-  description: "React Nextjs Medical Health & Doctors Template",
+
+  title: "Dr. Asyraf Azizan | Gynae And Laparoscopic Surgery In Kuala Lumpur & Selangor (Klang Valley)",
+  description: "Dr. Asyraf Azizan is a Consultant Obstetrician & Gynaecologist at KPJ Kajang Specialist Hospital, specializing in Antenatal Care & Delivery, Laparoscopy and Microwave Ablation (Minimally Invasive Surgery) & Early Gynae Cancer Treatment. Book an appointment today!",
+  icons: {
+    icon: [
+      { url: '/icon-32.png', sizes: '32x32', type: 'images/png' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'images/png' },
+    ],
+    apple: '/apple-icon-180.png',
+  },
 };
 
 export default function RootLayout({

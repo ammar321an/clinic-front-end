@@ -57,7 +57,7 @@ const MessageSuccessDialog: React.FC<MessageSuccessDialogProps> = ({
             onClick={(e) => e.stopPropagation()}
           >
             {/* Success Icon with Animation */}
-            <div className="flex flex-col items-center pt-8 pb-6 px-6">
+            <div className="flex flex-col items-center pt-3 pb-2 px-6">
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
@@ -87,7 +87,7 @@ const MessageSuccessDialog: React.FC<MessageSuccessDialogProps> = ({
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-2xl md:text-3xl font-bold text-gray-900 mt-6 mb-2 text-center"
+                className="text-2xl md:text-3xl font-bold text-gray-900 mt-2 mb-2 text-center"
               >
                 Message Sent Successfully!
               </motion.h2>
@@ -107,7 +107,7 @@ const MessageSuccessDialog: React.FC<MessageSuccessDialogProps> = ({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="bg-gradient-to-br from-blue-50 to-indigo-50 px-6 py-6 space-y-4"
+              className="bg-gradient-to-br from-blue-50 to-indigo-50 px-6 py-2 space-y-1 max-h-[30vh] md:max-h-none overflow-y-auto shadow-[inset_0_10px_10px_-10px_rgba(0,0,0,0.15),inset_0_-10px_10px_-10px_rgba(0,0,0,0.15)]"
             >
               <div className="flex items-start gap-3">
                 <MessageSquare className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
@@ -165,11 +165,11 @@ const MessageSuccessDialog: React.FC<MessageSuccessDialogProps> = ({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7 }}
-              className="p-6 flex justify-center"
+              className="p-3 flex justify-end"
             >
               <button
                 onClick={handleGoToDashboard}
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-3 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
               >
                 Go to Dashboard
               </button>

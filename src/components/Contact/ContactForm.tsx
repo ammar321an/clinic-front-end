@@ -184,7 +184,7 @@ const ContactFormContent: React.FC = () => {
                       </div>
 
                       {/* Phone */}
-                      <div className="col-lg-6 col-md-6 col-sm-6">
+                      <div className="col-lg-6 col-md-6">
                         <div className="form-group">
                           <input
                             type="text"

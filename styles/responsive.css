@@ -1010,7 +1010,7 @@
   /*-- End Location --*/
   /*-- Drop --*/
   .drop-item .drop-left {
-    padding-top: 0;
+    padding-top: 30px;
     padding-bottom: 30px;
     max-width: 100%;
     padding-right: 15px;
@@ -2874,4 +2874,4 @@
   .home-slider .swiper-button-prev::after, .home-slider .swiper-button-next::after {
     font-size: 20px;
   }
-}/*# sourceMappingURL=responsive.css.map */
+}

@@ -8,7 +8,7 @@ const ContactInfo: React.FC = () => {
       <div className="location-area pt-100 pb-70">
         <div className="container">
           <div className="row justify-content-center location-wrap">
-            <div className="col-sm-6 col-lg-4">
+            <div className="col-sm-6 col-lg-4 mb-6">
               <div className="location-item">
                 <i className="icofont-location-pin"></i>
                 <h3>Location</h3>
@@ -18,7 +18,7 @@ const ContactInfo: React.FC = () => {
               </div>
             </div>
 
-            <div className="col-sm-6 col-lg-4">
+            <div className="col-sm-6 col-lg-4 mb-6">
               <div className="location-item">
                 <i className="icofont-ui-message"></i>
                 <h3>Email</h3>
@@ -26,7 +26,7 @@ const ContactInfo: React.FC = () => {
               </div>
             </div>
 
-            <div className="col-sm-6 col-lg-4">
+            <div className="col-sm-6 col-lg-4 mb-6">
               <div className="location-item">
                 <i className="icofont-ui-call"></i>
                 <h3>Phone</h3>

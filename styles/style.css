@@ -3123,6 +3123,21 @@ footer {
   padding-top: 100px;
   padding-bottom: 100px;
 }
+/* Mobile: Small padding */
+@media (max-width: 768px) {
+  .drop-item .drop-left {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+}
+
+/* Tablet: Medium padding */
+@media (min-width: 769px) and (max-width: 991px) {
+  .drop-item .drop-left {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+}
 .drop-item .drop-left h2 {
   font-weight: 600;
   font-size: 32px;

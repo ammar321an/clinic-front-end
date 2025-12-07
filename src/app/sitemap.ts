@@ -4,23 +4,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.drasyrafazizan.com'
   
   // Static pages
-  const staticPages = [
-    '',
-    '/about',
-    '/blog',
-    '/appointment',
-    '/services/details',
-    '/doctors/details',
-    '/contact',
-  ].map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
+  const routes = [
+    { url: '', priority: 1.0 },
+    { url: '/about', priority: 0.8 },
+    { url: '/blog', priority: 0.8 },
+    { url: '/appointment', priority: 0.8 },
+    { url: '/services/details', priority: 0.8 },
+    { url: '/doctors/details', priority: 0.8 },
+    { url: '/contact', priority: 0.8 },
+  ]
+
+  const staticPages = routes.map((route) => ({
+    url: `${baseUrl}${route.url}`,
+    lastModified: new Date().toISOString(),
     changeFrequency: 'monthly' as const,
-    priority: route === '' ? 1.0 : 0.8,
+    priority: route.priority,
   }))
 
   // Blog posts
-  const blogPosts = [
+  const blogSlugs = [
     'kanser-ginekologi-saringan-faktor-risiko-pengesanan-awal',
     'kesuburan-pembekuan-telur-perancangan-masa-depan',
     'endometriosis-kesakitan-senyap-perjuangan-tersembunyi',
@@ -30,9 +32,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'menopause-dan-perimenopause-lebih-dari-sekadar-klise',
     'ketidakcukupan-serviks-cervical-insufficiency-cerclage-perlindungan-kehamilan-anda',
     'prolaps-organ-pelvis-peranakan-jatuh-apa-wanita-perlu-tahu',
-  ].map((slug) => ({
+  ]
+
+  const blogPosts = blogSlugs.map((slug) => ({
     url: `${baseUrl}/blog/${slug}`,
-    lastModified: new Date(),
+    lastModified: new Date().toISOString(),
     changeFrequency: 'monthly' as const,
     priority: 0.6,
   }))

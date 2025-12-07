@@ -19,7 +19,6 @@ import FloatingActionBar from "@/components/Layouts/FloatingActionBar";
 import ConditionalTopHeader from "@/components/Layouts/ConditionalTopHeader";
 import { Toaster } from "@/components/ui/toaster"
 
-
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
@@ -75,6 +74,14 @@ export const metadata: Metadata = {
     siteName: 'Dr. Asyraf Azizan',
     title: 'Dr. Muhammad Asyraf Azizan | Pakar Sakit Puan & Gynae Laparoscopic Surgery',
     description: 'Consultant Obstetrician & Gynaecologist di KPJ Kajang - Laparoscopic Surgery, Antenatal Care & Early Gynae Cancer Treatment',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Dr. Muhammad Asyraf Azizan - Pakar Sakit Puan & Obstetrik',
+      },
+    ],
   },
   
   robots: {
@@ -91,6 +98,7 @@ export const metadata: Metadata = {
   
   icons: {
     icon: [
+      { url: '/favicon.ico', sizes: 'any' },
       { url: '/icon-32.png', sizes: '32x32', type: 'image/png' },
       { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
     ],

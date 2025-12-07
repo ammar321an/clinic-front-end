@@ -19,7 +19,7 @@ const MenopauseContent: React.FC<MenopauseContentProps> = ({ images }) => {
                     className="mb-5"
                     items={[
                         {
-                        src: "/images/blog/blog-details-6a.jpg",
+                        src: "/images/blog/blog-details-7a.jpg",
                         alt: "Simptom “Red Flag” dalam Kesihatan Wanita: Tanda Bahaya yang Tidak Boleh Diabaikan",
                         title: "Red Flag Symptoms",
                         description: "Pentingnya mengenali simptom 'red flag' dalam kesihatan wanita."

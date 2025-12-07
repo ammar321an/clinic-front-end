@@ -106,7 +106,7 @@ export default function BlogDetailPage({ params }: PageProps) {
         bgImage="/images/page-banner4.jpg"
       />
 
-      <BlogDetailsWrapper blogDetail={blogDetail} />
+      <BlogDetailsWrapper blogDetail={blogDetail} currentSlug={params.slug} />
 
       <Footer />
     </>

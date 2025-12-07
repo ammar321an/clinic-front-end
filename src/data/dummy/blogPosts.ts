@@ -215,3 +215,23 @@ export const getBlogDetailBySlug = (slug: string): BlogDetailData | undefined =>
 export const getBlogPostBySlug = (slug: string): BlogPost | undefined => {
   return blogPosts.find((blog) => blog.slug === slug);
 };
+
+// Helper function to get previous blog post by current slug
+export const getPreviousBlogPost = (currentSlug: string): BlogPost | undefined => {
+  const currentIndex = blogPosts.findIndex((blog) => blog.slug === currentSlug);
+  if (currentIndex === -1) return undefined;
+  
+  // If first post, wrap to last post
+  const previousIndex = currentIndex === 0 ? blogPosts.length - 1 : currentIndex - 1;
+  return blogPosts[previousIndex];
+};
+
+// Helper function to get next blog post by current slug
+export const getNextBlogPost = (currentSlug: string): BlogPost | undefined => {
+  const currentIndex = blogPosts.findIndex((blog) => blog.slug === currentSlug);
+  if (currentIndex === -1) return undefined;
+  
+  // If last post, wrap to first post
+  const nextIndex = currentIndex === blogPosts.length - 1 ? 0 : currentIndex + 1;
+  return blogPosts[nextIndex];
+};

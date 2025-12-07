@@ -2,15 +2,18 @@
 
 import React from "react";
 import Link from "next/link";
-import { BlogDetailData } from "@/data/dummy/blogPosts";
+import { BlogDetailData, getPreviousBlogPost, getNextBlogPost } from "@/data/dummy/blogPosts";
 import { getContentComponent } from "./contentMapper";
 
 interface BlogDetailsWrapperProps {
   blogDetail: BlogDetailData;
+  currentSlug: string;
 }
 
-const BlogDetailsWrapper: React.FC<BlogDetailsWrapperProps> = ({ blogDetail }) => {
+const BlogDetailsWrapper: React.FC<BlogDetailsWrapperProps> = ({ blogDetail, currentSlug }) => {
   const ContentComponent = getContentComponent(blogDetail.contentComponent);
+  const previousPost = getPreviousBlogPost(currentSlug);
+  const nextPost = getNextBlogPost(currentSlug);
 
   return (
     <div className="blog-details-area pt-100">
@@ -71,10 +74,18 @@ const BlogDetailsWrapper: React.FC<BlogDetailsWrapperProps> = ({ blogDetail }) =
                 <div className="prev-next">
                   <ul>
                     <li>
-                      <a href="#">Previous</a>
+                      {previousPost && (
+                        <Link href={`/blog/${previousPost.slug}`}>
+                          <i className="icofont-arrow-left"></i> Previous
+                        </Link>
+                      )}
                     </li>
                     <li>
-                      <a href="#">Next</a>
+                      {nextPost && (
+                        <Link href={`/blog/${nextPost.slug}`}>
+                          Next <i className="icofont-arrow-right"></i>
+                        </Link>
+                      )}
                     </li>
                   </ul>
                 </div>

@@ -16,57 +16,59 @@ const OurExpertise: React.FC = () => {
           <div className="row align-items-center">
             <div className="col-lg-6">
               <div className="expertise-item">
-                <div className="row">
+                <div className="row" style={{ rowGap: '20px' }}>
                   <div className="col-sm-6 col-lg-6">
-                    <Link href="/blog/details">
-                      <div className="expertise-inner">
+                    <div className="expertise-inner">
+                      <Link href="/" className="expertise-link">
                         <i className="icofont-doctor-alt"></i>
                         <h3>Certified Doctors</h3>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit.
+                          Doktor bertauliah dengan kepakaran tinggi dalam memberikan rawatan terbaik kepada pesakit.
                         </p>
-                      </div>
-                    </Link>
+                      </Link>
+                    </div>
                   </div>
 
                   <div className="col-sm-6 col-lg-6">
-                    <Link href="/blog/details">
-                      <div className="expertise-inner">
+                    <div className="expertise-inner">
+                      <Link href="/" className="expertise-link">
                         <i className="icofont-stretcher"></i>
-                        <h3>Emergency</h3>
+                        <h3>
+                          Emergency
+                        </h3>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit.
+                          Perkhidmatan kecemasan yang pantas dan bersedia 24 jam untuk sebarang situasi kritikal.
                         </p>
-                      </div>
-                    </Link>
+                      </Link>
+                    </div>
                   </div>
 
                   <div className="col-sm-6 col-lg-6">
-                    <Link href="/blog/details">
-                      <div className="expertise-inner">
+                    <div className="expertise-inner">
+                      <Link href="/" className="expertise-link">
                         <i className="icofont-network"></i>
-                        <h3>Teachnology</h3>
+                        <h3>
+                          Technology
+                        </h3>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit.
+                          Dilengkapi teknologi perubatan moden bagi memastikan diagnosis dan rawatan lebih tepat.
                         </p>
-                      </div>
-                    </Link>
+                      </Link>
+                    </div>
                   </div>
 
                   <div className="col-sm-6 col-lg-6">
-                    <Link href="/blog/details">
-                      <div className="expertise-inner">
+                    <div className="expertise-inner">
+                      <Link href="/" className="expertise-link">
                         <i className="icofont-ambulance-cross"></i>
-                        <h3>Ambulance</h3>
+                        <h3>
+                          Ambulance
+                        </h3>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit.
+                          Perkhidmatan ambulans yang efisien bagi membantu pesakit mendapatkan rawatan segera.
                         </p>
-                      </div>
-                    </Link>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
